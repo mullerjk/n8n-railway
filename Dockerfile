@@ -1,4 +1,4 @@
-FROM node:20.19
+FROM node:22
 
 ARG N8N_VERSION=1.100.1
 
