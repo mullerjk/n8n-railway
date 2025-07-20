@@ -14,6 +14,9 @@ services:
       - DB_POSTGRESDB_PASSWORD=n8n_password
       - NODE_FUNCTION_ALLOW_EXTERNAL=pg
       - PORT=5555
+      - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
+      - N8N_PROTOCOL=https
+      - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
     ports:
       - "5555:5555"
     depends_on:
